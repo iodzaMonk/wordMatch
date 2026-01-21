@@ -1,3 +1,43 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+.correct-style {
+	@apply border-emerald-400 bg-emerald-900 text-white;
+}
+
+.wrong-style {
+	@apply border-red-400 bg-red-900 text-white;
+}
+
+.easy {
+	@apply text-emerald-500;
+	text-shadow:
+		0px 0px 10px oklch(0.7169 0.1 174 / 50%),
+		0px 0px 40px oklch(0.7169 0.1 174 / 100%);
+}
+
+.medium {
+	@apply text-amber-500;
+	text-shadow:
+		0px 0px 10px oklch(0.7521 0.1256 65.88 / 50%),
+		0px 0px 40px oklch(0.7521 0.1256 65.88 / 100%);
+}
+
+.hard {
+	@apply text-red-500;
+	text-shadow:
+		0px 0px 10px oklch(0.4532 0.1512 22.24 / 50%),
+		0px 0px 40px oklch(0.4532 0.1512 22.24 / 100%);
+}
+
+.extreme {
+	@apply text-fuchsia-500;
+	text-shadow:
+		0px 0px 10px oklch(0.3834 0.1512 345.18 / 50%),
+		0px 0px 40px oklch(0.3834 0.1512 345.18 / 100%);
+}
+
+.glass-surface {
+	@apply rounded-full border border-white/10 bg-white/5 shadow-2xl backdrop-blur-xl;
+}
