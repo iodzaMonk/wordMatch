@@ -1,9 +1,10 @@
 import { getQuizData } from "$lib/server/hsk";
 import type { PageServerLoad } from "./$types";
 
-export const load: PageServerLoad = async () => {
+export const load: PageServerLoad = async ({url}) => {
 
-    const {target, options} = getQuizData();
+    const lvl = url.searchParams.get('lvl');
+    const {target, options} = getQuizData(lvl as string);
     return {
         word: target,
         options: options

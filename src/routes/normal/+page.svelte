@@ -28,6 +28,7 @@
 </script>
 
 {#if phase === 'selection'}
+<a class="text-white text-5xl glass-surface py-4 px-8 absolute top-20 left-20" href="/">Go back</a>
 <div class="flex flex-col gap-5 mt-40 h-4/5">
     <h1 class="font-['Cinzel_Decorative'] text-transparent bg-clip-text bg-linear-to-b from-emerald-100 to-emerald-400 drop-shadow-[0_0_20px_rgba(16,185,129,0.4)] tracking-[0.2em] uppercase text-6xl mb-8 text-center">
         Select a mode
@@ -83,7 +84,7 @@
 
     <div class="hidden bg-emerald-900 bg-amber-900 bg-red-900 bg-fuchsia-900 bg-emerald-900/20 bg-amber-900/20 bg-red-900/20 bg-fuchsia-900/20 bg-emerald-900/40 bg-amber-900/40 bg-red-900/40 bg-fuchsia-900/40 shadow-emerald-500/30 shadow-amber-500/30 shadow-red-500/30 shadow-fuchsia-500/30 border-emerald-800 border-amber-800 border-red-800 border-fuchsia-800"></div>
 </div>
-{:else if phase === 'playing' || phase === 'end'}
+{:else if phase === 'playing' || phase === 'end' || phase === 'wait'}
     <Game target={propData.word} options={propData.options} onnext={() => invalidateAll()} difficulty={difficulty as Difficulty} bind:phase={phase}/>
 
 {/if}
